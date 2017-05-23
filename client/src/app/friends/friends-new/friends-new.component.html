@@ -1,0 +1,8 @@
+<h3>New Friend</h3>
+<form (submit)="create()">
+	<p>First Name: <input type="text" name="first_name" [(ngModel)]="newFriend.first_name"></p>
+	<p>Last Name:<input type="text" name="last_name" [(ngModel)]="newFriend.last_name"></p>
+	<p>Birthday:<input type="Date" name="birthday" [(ngModel)]="newFriend.birthday"></p>
+	<input type="submit" name="submitNew" value="Create New Friend">
+</form>
+<a [routerLink]="['/']"><button type="button" name="back">Back</button></a>

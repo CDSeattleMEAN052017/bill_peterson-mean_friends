@@ -1,0 +1,13 @@
+<table>
+	<tr>
+		<th>Name</th><th>Show</th><th>Update</th><th>Delete</th>
+	</tr>
+	<tr *ngFor="let friend of friends">
+		<td>{{friend.first_name}} {{friend.last_name}}</td>
+		<td><button type="button" name="show" (click)="showFriend(friend)">Show</button></td>
+		<td><button type="button" name="edit" (click)="editFriend(friend)">Edit</button></td>
+		<td><button type="button" name="delete" (click)="delete(friend)">Delete</button></td>
+	</tr>
+</table>
+
+<a [routerLink]="['/new']"><button type="button" name="create">Create New Friend</button></a>
